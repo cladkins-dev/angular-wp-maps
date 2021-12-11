@@ -1,0 +1,78 @@
+table {
+  width: auto;
+}
+
+table td, table th {
+  padding: 2px 10px;
+}
+
+
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: whitesmoke;
+}
+
+tr.example-element-row:not(.example-expanded-row):active {
+  background: #efefef;
+}
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+
+.example-element-detail {
+  overflow: hidden;
+  display: block;
+  width:1024px;
+}
+
+.example-element-detail h1 a {
+  margin-left:140px;
+}
+
+.example-element-description{
+  padding-left:100px;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+.example-element-detail a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+.example-element-detail a:link {
+  color: #a16ff1;
+}
+
+.example-element-detail a:visited {
+  color: #1ab3ce;
+}
+
+.example-element-detail a:focus {
+  border-bottom: 1px solid;
+  background: #BAE498;
+}
+
+.example-element-detail a:hover {
+  border-bottom: 1px solid;
+  background: #CDFEAA;
+}
+
+.example-element-detail a:active {
+  background: #265301;
+  color: #CDFEAA;
+}
+
+td, th {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.mat-sort-header-container {
+  justify-content: center !important;
+}
