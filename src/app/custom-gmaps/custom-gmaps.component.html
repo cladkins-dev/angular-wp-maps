@@ -1,0 +1,45 @@
+<h1>Google Maps</h1>
+<google-map id="custom-map" class="custom-map" height="500px" width="850px" [zoom]="zoom" [center]="center"
+    [options]="options">
+    <map-marker #markerElem
+    *ngFor="let marker of markers" [position]="marker.position" [label]="marker.label"
+         [title]="marker.title" [options]="marker_options">
+    </map-marker>
+
+</google-map>
+<div class="top-controls">
+    <button (click)="zoomIn()" style="margin-left:20px;margin-top:10px;" mat-raised-button color="primary">Zoom
+        in</button>
+    <button (click)="zoomOut()" style="margin-left:20px;margin-top:10px;" mat-raised-button color="primary">Zoom
+        out</button>
+</div>
+<div class="top-controls">
+    <button (click)="goToSecret(0)" style="margin-left:20px;margin-top:10px;" mat-raised-button
+        color="primary">Click for a Secret Location!</button>
+    <button (click)="goToSecret(1)" style="margin-left:20px;margin-top:10px;"
+        mat-raised-button color="primary">Click for another Secret Location!</button>
+    <button (click)="goToSecret(2)" style="margin-left:20px;margin-top:10px;"
+        mat-raised-button color="primary">Click for yet another Secret Location!</button>
+</div>
+
+<div class="top-controls">
+    <p>
+        Please enter a Latitude and a Longitude below and click "Go to Location!"
+    </p>
+    <mat-form-field>
+        <mat-label></mat-label>
+        <input id="latInput" style="margin-left:20px;margin-top:10px;" matInput placeholder="Latitude"
+            value="{{markers[0].position.lat}}" #latInput>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label></mat-label>
+        <input id="lngInput" style="margin-left:20px;margin-top:10px;" matInput placeholder="Longitude"
+            value="{{markers[0].position.lng}}" #lngInput>
+    </mat-form-field>
+</div>
+
+
+<div class="top-controls">
+    <button (click)="onInputSearch(latInput.value,lngInput.value)" mat-raised-button color="primary">Go to
+        Location!</button>
+</div>

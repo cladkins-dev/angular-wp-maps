@@ -3,7 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import {animate, state, style, transition, trigger} from '@angular/animations';
 
 
-
+//setup interface for posts
 export interface Post {
   id: string;
   slug: object;
@@ -37,24 +37,14 @@ export class CustomTableComponent implements OnInit {
   console = console;
   
 
-
-  
-  
   constructor(private http: HttpClient) { 
     
   };
 
-  isNumber(val:any): boolean { return typeof val === 'number'; }
-  fixRendering(val:string): string{
-    this.console.log(val);
-    return val.replace("/&#8211;/gi","-");
-  }
-
-
   ngOnInit(): void {
+    //get API content
     this.http.get<Post[]>(this.api).subscribe(
       (res) => {
-        this.console.log(res);
         this.dataSource=res;
 
       },

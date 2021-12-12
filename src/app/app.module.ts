@@ -9,12 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import {MatTabsModule} from '@angular/material/tabs';
+import { GoogleMapsModule } from '@angular/google-maps'
 
 
 
 
 import {  MatButtonModule } from '@angular/material/button';
 import { CustomTableComponent } from './custom-table/custom-table.component';
+import { CustomGmapsComponent } from './custom-gmaps/custom-gmaps.component';
 
 
 console.log("Angular Verison:"+VERSION.full);  
@@ -23,7 +25,8 @@ console.log("Angular Verison:"+VERSION.full);
 @NgModule({
   declarations: [
     AppComponent,
-    CustomTableComponent
+    CustomTableComponent,
+    CustomGmapsComponent
   ],
   imports: [ 
     BrowserModule,
@@ -34,7 +37,8 @@ console.log("Angular Verison:"+VERSION.full);
     AppRoutingModule,
     HttpClientModule,
     MatTableModule,
-    MatTabsModule
+    MatTabsModule,
+    GoogleMapsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

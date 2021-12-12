@@ -2,32 +2,23 @@
 <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8">
   <ng-container oninput="this.value = this.value.toUpperCase()" matColumnDef="{{column}}"
     *ngFor="let column of columnsToDisplay">
-    {{ console.log(column)}}
-
-
     <th mat-header-cell *matHeaderCellDef> {{(column=== 'date' ? 'Created Date':column) | uppercase}} </th>
-
-    
-
     <td mat-cell *matCellDef="let element"> {{(element[column].rendered)||(column==='status' ? (element[column]|titlecase) : element[column])}} </td>
-
-
   </ng-container>
 
-  <!-- Expanded Content Column - The detail row is made up of this one column that spans across all columns -->
   <ng-container matColumnDef="expandedDetail">
     <td mat-cell *matCellDef="let element" [attr.colspan]="columnsToDisplay.length">
-      <div class="example-element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+      <div class="custom-element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
         <h1><a href="{{element.link}}" target="_blank">{{element.title.rendered}}</a></h1>
-        <div class="example-element-description" [innerHTML]="element.content.rendered"></div>
+        <div class="custom-element-description" [innerHTML]="element.content.rendered"></div>
       </div>
     </td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-  <tr mat-row *matRowDef="let element; columns: columnsToDisplay;" class="example-element-row"
-    [class.example-expanded-row]="expandedElement === element"
+  <tr mat-row *matRowDef="let element; columns: columnsToDisplay;" class="custom-element-row"
+    [class.custom-expanded-row]="expandedElement === element"
     (click)="expandedElement = expandedElement === element ? null : element">
   </tr>
-  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+  <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="custom-detail-row"></tr>
 </table>
