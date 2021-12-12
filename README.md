@@ -10,6 +10,12 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4201/`. The app w
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Google Maps API Key
+To be able to use the code you will need to put in your API Key for Google Maps. 
+./src/index.html
+
+Find the line with "<API_KEY>" and then replace it with your API Key.
+
 
 ## Docker Compose
 See docker-compose.yaml for example config.
