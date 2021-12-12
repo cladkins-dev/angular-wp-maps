@@ -15,6 +15,8 @@ To be able to use the code you will need to put in your API Key for Google Maps.
 ./src/index.html
 
 Find the line with "<API_KEY>" and then replace it with your API Key.
+Prehaps in the future I will use a environment variable for this instead, 
+however since the Google API key is already going to be visible in the browser it doesn't make a lot of sense.
 
 
 ## Docker Compose
