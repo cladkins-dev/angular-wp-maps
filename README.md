@@ -1,4 +1,4 @@
-# WpMapsApp
+# Angular Wordpress Maps Demo
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.14.
 
@@ -9,6 +9,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4201/`. The app w
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+
+## Docker Compose
+See docker-compose.yaml for example config.
 
 ## Troubleshooting Steps / Lessons Learned
     npm i -g @angular/cli@12
