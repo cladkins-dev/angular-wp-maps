@@ -7,14 +7,16 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkBotMBn-ky1wDMlbBuJRwyPQDZZj9qz8&libraries=places"></script>
-
+  <!-- Normally would worry about hiding an API key but this is fine here. -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkBotMBn-ky1wDMlbBuJRwyPQDZZj9qz8&libraries=places"></script>
 </head>
 
 <body>
+  <!-- I know using center is naughty. -->
   <center>
-  <app-root></app-root>
-</center>
+    <app-root></app-root>
+  </center>
 </body>
 
 </html>
