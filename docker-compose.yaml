@@ -10,9 +10,9 @@ services:
         UPSTREAM: app:4201
         VIRTUAL_PORT: 80
         HTTPS_METHOD: noredirect
-        VIRTUAL_HOST: im-angular-test.awsh.live
-        LETSENCRYPT_HOST: im-angular-test.awsh.live
-        LETSENCRYPT_EMAIL: codyadkins@gmail.com
+        VIRTUAL_HOST: im-angular.live
+        LETSENCRYPT_HOST: im-angular.live
+        LETSENCRYPT_EMAIL: eamil@gmail.com
         
   app:
      image: node:12.14
